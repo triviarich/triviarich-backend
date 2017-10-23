@@ -1,0 +1,14 @@
+h1 Questions
+
+= link_to 'New Question', new_question_path
+
+- @questions.each do |q|
+  h3
+    = link_to q.text, q
+
+  ul
+    li = "A) #{q.a}"
+    li = "B) #{q.b}"
+    li = "C) #{q.c}"
+    li = "D) #{q.d}"
+    li = "Correct: #{q.answer}"

@@ -1,0 +1,22 @@
+= form_for @question do |f|
+  h4 Text
+  = f.text_area :text
+
+  h5 Answer A
+  = f.text_field :a
+
+  h5 Answer B
+  = f.text_field :b
+
+  h5 Answer C
+  = f.text_field :c
+
+  h5 Answer D
+  = f.text_field :d
+
+  h5 Correct Answer
+  = select_tag 'answer', options_for_select([['A', 0], ['B', 1], ['C', 2], ['D', 3]])
+
+  p
+
+  = f.submit
