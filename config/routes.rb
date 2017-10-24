@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  mount ActionCable.server => '/cable'
+  # mount ActionCable.server => '/cable'
 
   namespace :api do
     namespace :v1 do
@@ -14,4 +14,6 @@ Rails.application.routes.draw do
   root 'questions#index'
 
   resources :questions, only: %i[create destroy index new show]
+
+  resources :games, only: %i[index]
 end
